@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Best Tour Plan - Hotel Booking</title> 
+    <title>Best Tour Plan - Hotel Booking</title>
   </head>
   <body>
     <header class="navbar navbar__mobile_fixed">
@@ -984,23 +984,32 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
-            <foorm class="footer__form">
+            <foorm
+              action="send.php"
+              method="POST"
+              enctype="multipart/form-data"
+              class="footer__form"
+            >
               <input
                 type="text,"
                 placeholder="Your Full Name*"
                 class="input footer__input"
+                name="name"
               />
               <input
                 type="text,"
                 placeholder="Phone Number*"
                 class="input footer__input"
+                name="phone"
               />
               <textarea
                 class="footer__message"
                 placeholder="Message"
                 style="resize: none;"
+                name="message"
               ></textarea>
               <button type="submit" class="button footer__button">Send</button>
+              <button type="submit">send2</button>
               <span class="footer__info">* Required Fields</span>
             </foorm>
           </div>
