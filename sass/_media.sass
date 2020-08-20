@@ -1,0 +1,369 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .hotel-slider
+    width: 590px
+  .card
+    width: 230px
+    height: 230px
+  .grid-card
+    grid-template-columns: 1fr 1fr 
+    grid-template-rows: repeat(3, 1fr)
+    &__item
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(2, 1fr)
+      &:nth-child(1)
+        grid-column: 1 / 3
+      &:nth-child(2)
+        grid-column: 1 / 2
+      &:nth-child(3)
+        grid-column: 2 / 3
+      &:nth-child(4)
+        grid-column: 1 / 2
+      &:nth-child(5)
+        grid-column: 2 / 3
+      &_large
+        grid-template-columns: 1fr 1fr
+        max-width: 730px
+  .footer
+    &__logo
+      grid-row: 1 / 2
+    &__input
+      flex-basis: 100%
+
+@media (max-width: 992px)
+  .search
+    &__input
+      width: 340px
+  .newsletter-wrapper
+    max-width: 720px
+  .container
+    max-width: 720px
+    .navbar
+      &__logo
+        max-width: 133px
+      &-top
+        padding: 30px 0
+      &__search
+        margin-left: auto
+      &-menu
+        padding: 22px 0
+        &__link
+          font-size: 12px
+          line-height: 15px
+  .hotel
+    &-slider
+      width: 100%
+    &-grid
+      flex-direction: column
+      &-wrapper
+        flex-direction: row
+      &__slider
+        margin-bottom: 30px
+  .reviews
+    &-slider
+      &__item
+        max-width: 579px
+  .activities
+    padding: 60px 0 70px 0
+    &-wrapper
+      flex-wrap: wrap
+    &__card
+      margin-bottom: 20px
+  .card
+    width: 340px
+    height: 230px
+  .grid-card
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(5, 1fr)
+
+    &__item
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(2, 1fr)
+      max-width: 100%
+      &:nth-child(1)
+        grid-column: 1 / 2
+      &:nth-child(2)
+        grid-column: 1 / 2
+      &:nth-child(3)
+        grid-column: 1 / 2
+      &:nth-child(4)
+        grid-column: 1 / 2
+      &:nth-child(5)
+        grid-column: 1 / 2
+      &_large
+        grid-template-columns: 1fr 
+        max-width: 100%
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center 
+    &__categories
+      grid-column: span 2
+      grid-row: 2 / 3
+    &__contact-details
+      grid-column: span 5
+      grid-row: 3
+    &__contact-form
+      grid-column: span 5
+      grid-row: 4
+    &__input
+      flex-basis: 49%
+    &__additional
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+  .copyright
+    padding: 56px 0 0
+    &__info
+      &_shift
+        margin: 0
+    &__link
+      &:nth-child(1)
+        margin: 0
+        
+
+@media (max-width: 768px)
+  body
+    padding-top: 78px
+  .container
+    max-width: 576px
+    width: 92%
+  .user
+    &__name
+      &_light
+        color: $text-light
+        margin-left: 0
+        margin-bottom: 27px
+    &__avatar
+      margin-bottom: 10px
+  .navbar
+    &__mobile
+      &_fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 99
+    &__search
+      width: 90%
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+    &__user
+      flex-direction: column
+      align-items: center
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+    &-bottom
+      width: 100% // это свойство - помогло убрать горизонтальную полосу прокрутки
+      display: none
+      position: fixed
+      top: 78px
+      left: 0
+      right: 0
+      bottom: 0
+      padding-top: 31px
+      overflow-y: auto
+      &_visible
+        display: block
+    &-menu
+      padding-top: 0
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &_mobile
+          &_visible
+            display: block
+  .menu
+    &-button
+      outline: 0
+      border: none
+      width: 16px
+      height: 11px
+      padding: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      background-color: #fff
+      cursor: pointer
+      &__line
+        width: 16px
+        height: 1px
+        background-color: $text-color
+  .stars
+    flex-basis: auto
+  .offer
+    order: -1
+    margin-left: 0
+  .hotel
+    &-name
+      flex-basis: 100%
+    &-wrapper
+      justify-content: space-between
+    &-info
+      &__text
+        width: 100%
+      &__rating
+        display: none
+      &__name
+        margin-top: 10px
+    &-grid
+      &-wrapper
+        flex-direction: column
+        min-height: 460px
+  .hotel-slider__item
+    height: 350px
+  .booking
+    width: 100%
+  .map
+    width: 100%
+  .newsletter
+    &-wrapper
+      max-width: 576px
+      width: 92%
+      flex-direction: column
+      align-items: flex-start
+    &__title
+      margin-bottom: 37px
+  .reviews
+    &-slider
+      &__item
+        padding: 0 30px 30px
+        &::before, &::after
+          display: none
+      &__button
+        top: 32px
+        &--prev
+          left: 50%
+          margin-left: -65px
+          transform: translateX(-50%)
+        &--next
+          right: 50%
+          margin-right: -65px
+          transform: translateX(50%)
+    &__title
+      font-size: 30px
+      line-height: 38px
+  .card
+    width: 49%
+    height: 255px
+  .grid-card
+    &__title-wrapper
+      margin: 0
+    &__item
+      &:nth-child(1)
+        grid-column: 1 / 2
+      &_large
+        grid-template-columns: 1fr 
+        grid-template-rows: repeat(2, 1fr)
+        max-width: 100%
+    &__image
+      &_large
+        grid-column: 1 / 2
+        max-width: 100%
+        height: 250px
+    &__picture
+      object-fit: cover
+      width: 100%
+      height: 100%
+    &__hotel-name
+      &_large
+        margin: 0 0 23px
+    &__desc-text
+      display: none
+    &__info
+      &_large
+        grid-column: 1 / 2
+        height: 250px
+        padding: 30px
+    &__description
+      &_large
+        margin-bottom: 24px
+  .stars
+    display: none
+  .footer
+    &__input
+      flex-basis: 100%
+  
+
+@media (max-width: 576px)
+  .navbar
+    &__logo
+      width: 99px
+  .hotel-slider__item
+    height: 250px
+  .newsletter
+    padding: 76px 0 83px
+    &-title
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        line-height: 38px
+  .subscribe
+    max-width: 280px
+  .reviews
+    padding: 40px 0 50px
+    &-slider
+      min-height: 485px
+      &__item
+        max-width: 280px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin: 0 0 40px
+  .activities
+    padding: 40px 0 40px 0
+    &__title
+      margin-bottom: 36px
+      font-size: 18px
+      line-height: 23px
+  .card
+    width: 100%
+    height: 230px
+  .footer
+    
+    &-wrapper
+      grid-template-columns: minmax(min-content, max-content)
+    &__logo
+      grid-column: 1
+      grid-row: 1
+    &__social
+      &-network
+        grid-column: 1
+        grid-row: 2
+    &__categories
+      grid-column: 1
+      grid-row: 3
+    &__additional
+      grid-column: 1
+      grid-row: 4
+    &__legal
+      grid-column: 1
+      grid-row: 5
+    &__contact-details
+      grid-column: 1
+      grid-row: 6
+    &__contact-form
+      grid-column: 1
+      grid-row: 7
+  .copyright
+    padding: 30px 0 0
+    flex-wrap: wrap
