@@ -10,7 +10,7 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
+$title = "сообщение best tour plan";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
@@ -29,11 +29,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'aligncod@gmail.com '; // Логин на почте
+    $mail->Username   = 'aligncod@gmail.com'; // Логин на почте
     $mail->Password   = '95a96b97c'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('aligncod@gmail.com ', 'Align Cod'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('aligncod@gmail.com', 'Align Cod'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('bogdanov0988@yandex.ru');  
@@ -53,4 +53,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.html');
