@@ -256,7 +256,9 @@
                 </a>
               </div>
               <!-- /.booking__call-center -->
-              <button data-toggle="modal" class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <!-- /.booking -->
             <div id="map" class="map">
@@ -605,9 +607,11 @@
         </h2>
         <form action="#" class="subscribe newsletter__subscribe">
           <input
-            type="text"
+            type="email"
             placeholder="Your email address"
             class="subscribe__input"
+            name="email"
+            required
           />
           <button class="subscribe__button">
             Send
@@ -984,19 +988,27 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="form footer__form">
-              <input
-                type="text,"
-                placeholder="Your Full Name*"
-                class="input footer__input"
-                name="name"
-              />
-              <input
-                type="text,"
-                placeholder="Phone Number*"
-                class="input footer__input"
-                name="phone"
-              />
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text,"
+                  placeholder="Your Full Name*"
+                  class="input footer__input"
+                  required
+                  name="name"
+                  minlength="2"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  placeholder="Phone Number*"
+                  class="input footer__input"
+                  required
+                  name="phone"
+                  minlength="5"
+                />
+              </div>
               <textarea
                 class="message footer__message"
                 placeholder="Message"
@@ -1038,24 +1050,29 @@
           <img src="img/close.svg" alt="icon: close-button" />
         </a>
         <h3 class="modal__title modal__title_mb-3">booking</h3>
-        <form action="send.php" method="POST" class="form modal__form">
+        <form action="send.php" method="POST" class="modal__form form">
           <input
             type="text,"
             placeholder="Your Full Name*"
             class="input modal__input"
             name="name"
+            required
+            minlength="2"
           />
           <input
-            type="text,"
+            type="tel"
             placeholder="Phone Number*"
             class="input modal__input"
             name="phone"
+            minlength="5"
+            required
           />
           <input
-            type="text,"
+            type="email"
             placeholder="Email*"
             class="input modal__input"
             name="email"
+            required
           />
           <textarea
             class="message modal__message"
@@ -1077,6 +1094,7 @@
       type="text/javascript"
     ></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

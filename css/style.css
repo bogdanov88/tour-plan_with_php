@@ -442,6 +442,10 @@ button {
       flex-wrap: wrap;
 }
 
+.invalid {
+  color: #EC1F46;
+}
+
 .navbar {
   background-color: #ffffff;
 }
@@ -1576,6 +1580,7 @@ button {
 
 .footer__message {
   height: 123px;
+  margin-top: 15px;
   margin-bottom: 23px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1590,7 +1595,11 @@ button {
 }
 
 .footer__input {
-  margin-bottom: 15px;
+  width: 100%;
+}
+
+.footer__input-group {
+  margin-top: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
 }
@@ -1715,13 +1724,17 @@ button {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
   min-height: 123px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1792,7 +1805,7 @@ button {
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1940,7 +1953,7 @@ button {
     -ms-grid-row: 4;
     grid-row: 4;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
@@ -1961,6 +1974,16 @@ button {
   }
   .modal__input {
     min-width: 250px;
+  }
+}
+
+@media (max-height: 450px) {
+  .modal {
+    height: 100%;
+  }
+  .modal__dialog {
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 
@@ -2203,9 +2226,12 @@ button {
   .stars {
     display: none;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .modal {
+    min-height: 100%;
   }
   .modal__dialog {
     padding: 5% 12%;

@@ -47,24 +47,42 @@ $(document).ready(function () {
       .classList.toggle("navbar-bottom_visible");
   });
 
-  var modalButton = $('[data-toggle=modal]');
-  var closeModalButton = $('.modal__close');
+  var modalButton = $("[data-toggle=modal]");
+  var closeModalButton = $(".modal__close");
 
-  modalButton.on('click', openModal);
-  closeModalButton.on('click', closeModal);
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
 
   function openModal() {
-    var modalOverlay = $('.modal__overlay');
-    var modalDialog = $('.modal__dialog');
-    modalOverlay.addClass('modal__overlay_visible');
-    modalDialog.addClass('modal__dialog_visible');
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.addClass("modal__overlay_visible");
+    modalDialog.addClass("modal__dialog_visible");
   }
   function closeModal(event) {
     event.preventDefault();
-    var modalOverlay = $('.modal__overlay');
-    var modalDialog = $('.modal__dialog');
-    modalOverlay.removeClass('modal__overlay_visible');
-    modalDialog.removeClass('modal__dialog_visible');
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay_visible");
+    modalDialog.removeClass("modal__dialog_visible");
   }
-
+  //обработка формы
+  $(".form").each(function() {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Укажите имя",
+          minlength: "минимум 2 символа",
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone: {
+          required: "введите телефон",
+        },
+      },
+    });
+  });
 });

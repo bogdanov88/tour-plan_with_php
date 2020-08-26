@@ -30,7 +30,8 @@
     &__logo
       grid-row: 1 / 2
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
 
 @media (max-width: 992px)
   .search
@@ -118,7 +119,8 @@
       grid-column: span 5
       grid-row: 4
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 49%
     &__additional
       grid-column: span 2
     &__legal
@@ -142,6 +144,14 @@
     //   width: 100%
     //   margin-top: 1em
     //   text-align: end
+
+@media (max-height: 450px)
+  .modal
+    height: 100%
+    &__dialog
+      height: 100%
+      // max-height: 487px
+      overflow-y: scroll
 
 @media (max-width: 768px)
   body
@@ -310,8 +320,10 @@
     display: none
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .modal
+    min-height: 100%
     &__dialog
       padding: 5% 12%
     &__input
