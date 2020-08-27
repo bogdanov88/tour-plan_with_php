@@ -8,6 +8,7 @@
       name="viewport"
       content="initial-scale=1.0, user-scalable=no, maximum-scale=1"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
@@ -20,7 +21,11 @@
     <header class="navbar navbar__mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="navbar__logo"
+          <a
+            href="#"
+            class="navbar__logo"
+            data-aos="fade-right"
+            data-aos-delay="100"
             ><img
               src="img/horisontal-logo.svg"
               alt="image: logotype"
@@ -29,6 +34,8 @@
 
           <form
             action="#"
+            data-aos="fade-buttom"
+            data-aos-delay="300"
             class="search navbar__search navbar__search_mobile_hidden"
           >
             <input
@@ -41,7 +48,12 @@
             </button>
           </form>
 
-          <a href="#" class="user navbar__user navbar__user_mobile_hidden">
+          <a
+            href="#"
+            class="user navbar__user navbar__user_mobile_hidden"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          >
             <img
               src="img/user-avatar.jpg"
               alt="photo: user Nathan"
@@ -288,7 +300,11 @@
         <h2 class="other-packages__title">Other Packages</h2>
         <!-- /.other-packages__title -->
         <div class="grid-card grid-wrapper">
-          <div class="grid-card__item grid-card__item_large">
+          <div
+            class="grid-card__item grid-card__item_large"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
             <div class="grid-card__image grid-card__image_large">
               <img src="img/other/1.jpg" alt="" class="grid-card__picture" />
             </div>
@@ -381,7 +397,11 @@
             </div>
           </div>
           <!-- /.grid-card__item -->
-          <div class="grid-card__item">
+          <div
+            class="grid-card__item"
+            data-aos="flip-right"
+            data-aos-delay="100"
+          >
             <div class="grid-card__image">
               <img src="img/other/2.jpg" alt="" class="grid-card__picture" />
             </div>
@@ -434,7 +454,7 @@
             </div>
           </div>
           <!-- /.grid-card__item -->
-          <div class="grid-card__item">
+          <div class="grid-card__item" data-aos="flip-up" data-aos-delay="100">
             <div class="grid-card__image">
               <img src="img/other/3.jpg" alt="" class="grid-card__picture" />
             </div>
@@ -487,7 +507,7 @@
             </div>
           </div>
           <!-- /.grid-card__item -->
-          <div class="grid-card__item">
+          <div class="grid-card__item" data-aos="flip-up" data-aos-delay="100">
             <div class="grid-card__image">
               <img src="img/other/4.jpg" alt="" class="grid-card__picture" />
             </div>
@@ -540,7 +560,7 @@
             </div>
           </div>
           <!-- /.grid-card__item -->
-          <div class="grid-card__item">
+          <div class="grid-card__item" data-aos="flip-up" data-aos-delay="100">
             <div class="grid-card__image">
               <img src="img/other/5.jpg" alt="" class="grid-card__picture" />
             </div>
@@ -766,7 +786,11 @@
         </h2>
         <!-- /.activities__title -->
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <img
               src="img/activity-1.jpg"
               alt="activity photo: The curious corner of chamarel"
@@ -776,7 +800,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <img
               src="img/activity-2.jpg"
               alt="activity photo: Gymkhana club golf course"
@@ -786,7 +814,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               src="img/activity-3.jpg"
               alt="activity photo: Tamarind falls hiking trip - full day"
@@ -796,7 +828,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             <img
               src="img/activity-4.jpg"
               alt="activity photo: The blue marine discovery quest"
@@ -1095,6 +1131,7 @@
     ></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
