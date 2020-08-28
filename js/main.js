@@ -67,20 +67,20 @@ $(document).ready(function () {
     modalDialog.removeClass("modal__dialog_visible");
   }
   //обработка формы
-  $(".form").each(function() {
+  $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
       messages: {
         name: {
-          required: "Укажите имя",
-          minlength: "минимум 2 символа",
+          required: "Enter your name!",
+          minlength: "most min 2 symbol",
         },
         email: {
           required: "We need your email address to contact you",
           email: "Your email address must be in the format of name@domain.com",
         },
         phone: {
-          required: "введите телефон",
+          required: "Enter phone number",
         },
       },
     });
