@@ -25,6 +25,8 @@ $(document).ready(function () {
     // Optional parameters
     loop: true,
 
+    autoHeight: true,
+
     // Navigation arrows
     navigation: {
       nextEl: ".reviews-slider__button--next",
@@ -81,6 +83,18 @@ $(document).ready(function () {
         },
         phone: {
           required: "Enter phone number",
+          minlength: "format: 80000000000",
+        },
+      },
+    });
+  });
+  $(".subscribe").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
         },
       },
     });

@@ -20,7 +20,7 @@
     <header class="navbar navbar__mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="navbar__logo"
+          <a href="index.html" class="navbar__logo"
             ><img
               src="img/horisontal-logo.svg"
               alt="image: logotype"
@@ -118,20 +118,14 @@
       <div class="container">
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-list__item">
-            <a href="#" class="breadcrumbs-list__link">
-              Home
-            </a>
+            <a href="#" class="breadcrumbs-list__link"> Home </a>
           </li>
 
           <li class="breadcrumbs-list__item">
-            <a href="#" class="breadcrumbs-list__link">
-              Flash Offers
-            </a>
+            <a href="#" class="breadcrumbs-list__link"> Flash Offers </a>
           </li>
 
-          <li class="breadcrumbs-list__item">
-            Grand Hilton Hote
-          </li>
+          <li class="breadcrumbs-list__item">Grand Hilton Hote</li>
         </ul>
       </div>
       <!-- /div .container -->
@@ -156,44 +150,28 @@
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  All Deals
-                </a>
+                <a href="#" class="footer__link"> All Deals </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Hotels
-                </a>
+                <a href="#" class="footer__link"> Hotels </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Activities
-                </a>
+                <a href="#" class="footer__link"> Activities </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Spa Packages
-                </a>
+                <a href="#" class="footer__link"> Spa Packages </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Hotel Day Packages
-                </a>
+                <a href="#" class="footer__link"> Hotel Day Packages </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Restaurants
-                </a>
+                <a href="#" class="footer__link"> Restaurants </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Fitness
-                </a>
+                <a href="#" class="footer__link"> Fitness </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Rodrigues
-                </a>
+                <a href="#" class="footer__link"> Rodrigues </a>
               </li>
             </ul>
           </div>
@@ -202,19 +180,13 @@
             <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  About Us
-                </a>
+                <a href="#" class="footer__link"> About Us </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Contact Us
-                </a>
+                <a href="#" class="footer__link"> Contact Us </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  How does it work?
-                </a>
+                <a href="#" class="footer__link"> How does it work? </a>
               </li>
               <li class="footer__item">
                 <a href="#" class="footer__link">
@@ -222,9 +194,7 @@
                 </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Deals.mu loyalty program
-                </a>
+                <a href="#" class="footer__link"> Deals.mu loyalty program </a>
               </li>
               <li class="footer__item">
                 <a href="#" class="footer__link">
@@ -254,24 +224,16 @@
             <h3 class="footer__title">LEGAL INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Terms & Conditions
-                </a>
+                <a href="#" class="footer__link"> Terms & Conditions </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Disclaimer
-                </a>
+                <a href="#" class="footer__link"> Disclaimer </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Cancellation policy
-                </a>
+                <a href="#" class="footer__link"> Cancellation policy </a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Privacy
-                </a>
+                <a href="#" class="footer__link"> Privacy </a>
               </li>
             </ul>
           </div>
@@ -321,23 +283,31 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text,"
-                placeholder="Your Full Name*"
-                class="input footer__input"
-                name="name"
-              />
-              <input
-                type="text,"
-                placeholder="Phone Number*"
-                class="input footer__input"
-                name="phone"
-              />
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  placeholder="Your Full Name*"
+                  class="input footer__input"
+                  required
+                  name="name"
+                  minlength="2"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  placeholder="Phone Number*"
+                  class="input footer__input"
+                  required
+                  name="phone"
+                  minlength="11"
+                />
+              </div>
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
-                style="resize: none;"
+                style="resize: none"
                 name="message"
               ></textarea>
               <button type="submit" class="button footer__button">Send</button>
